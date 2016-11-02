@@ -1,6 +1,7 @@
 # coding: utf-8
 # criação da Classe Usuario
 # github.com/carloscuzik
+#
 
 require_relative "Rota"
 require_relative "Ponto"
