@@ -16,7 +16,7 @@ class TesteUsuario < Test::Unit::TestCase
 	end
 	#teste dos gets e sets para os atributos da classe Usuario
 	def teste_sets_e_gets_user
-		user = Usuario.new("09309261960","Carlos Eduardo Cuzik","asd")
+		user = Usuario.new(1,"09309261960","Carlos Eduardo Cuzik","asd")
 		user.cpf = "09209361970"
 		user.nome = "Carlos E. Cuzik"
 		assert_equal("09209361970",user.cpf)
@@ -31,7 +31,7 @@ class TesteAdministrador < Test::Unit::TestCase
 	end
 	#teste dos gets e sets para os atributos da classe Administrador
 	def teste_sets_e_gets_adm
-		adm = Administrador.new("09309261960","Carlos Eduardo Cuzik","asd")
+		adm = Administrador.new(1,"09309261960","Carlos Eduardo Cuzik","asd")
 		adm.cpf = "09209361970"
 		adm.nome = "Carlos E. Cuzik"
 		assert_equal("09209361970",adm.cpf)
@@ -46,13 +46,9 @@ class TesteRota < Test::Unit::TestCase
 	end
 	#teste dos gets e sets para os atributos da classe Rota
 	def teste_sets_e_gets_rota
-		rota = Rota.new("Rota01",["15:50","17:30"],2)
+		rota = Rota.new(1,"Rota01")
 		rota.nome = "Rota1"
 		assert_equal("Rota1",rota.nome)
-		assert_equal(["15:50","17:30"],rota.horarios)
-		assert_equal("15:50",rota.horarios[0])
-		assert_equal("17:30",rota.horarios[1])
-		assert_equal(2,rota.n_rep)
 		assert_equal(1,rota.cod_rota)
 	end
 end
@@ -63,9 +59,7 @@ class TestePonto < Test::Unit::TestCase
 	end
 	#teste dos gets e sets para os atributos da classe Ponto
 	def teste_sets_e_gets_ponto
-		ponto = Ponto.new("Rua ASD 01")
-		ponto.endereco = "Rua ASD 1"
-		assert_equal("Rua ASD 1",ponto.endereco)
+		ponto = Ponto.new(1,0,0)
 		assert_equal(1,ponto.cod_pt)
 	end
 end

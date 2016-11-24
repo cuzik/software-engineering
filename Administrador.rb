@@ -10,10 +10,8 @@ class Administrador
 	@senha = ""
 	attr_accessor :cpf, :nome
 	attr_reader :cod_adm
-	def initialize(cpf,nome,senha)
-		@@cod_adm_geral = 0 # consertar isso aqui
-		@@cod_adm_geral = @@cod_adm_geral + 1
-		@cod_adm = @@cod_adm_geral
+	def initialize(id,cpf,nome,senha)
+		@cod_adm = id
 		@senha = senha
 		@cpf = cpf
 		@nome = nome

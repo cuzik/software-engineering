@@ -3,12 +3,11 @@
 # github.com/carloscuzik
 
 class Ponto
-	attr_accessor :endereco
+	attr_accessor :endereco, :la, :lo
 	attr_reader :cod_pt
-	def initialize(endereco)
-		@@cod_ponto_geral = 0
-		@@cod_ponto_geral = @@cod_ponto_geral + 1
-		@cod_pt = @@cod_ponto_geral
-		@endereco = endereco
+	def initialize(id,la,lo)
+		@cod_pt = id
+		@la = la
+		@lo = lo
 	end
 end

@@ -1,19 +1,16 @@
 # coding: utf-8
 # criação da Classe Usuario
 # github.com/carloscuzik
-#
 
 require_relative "Rota"
 require_relative "Ponto"
 
 class Usuario
 	@senha = ""
-	attr_accessor :cpf, :nome
+	attr_accessor :cpf, :nome, :ponto_atual
 	attr_reader :cod_user
-	def initialize(cpf,nome,senha)
-		@@cod_user_geral = 0 # consertar isso aqui
-		@@cod_user_geral = @@cod_user_geral + 1
-		@cod_user = @@cod_user_geral
+	def initialize(id,cpf,nome,senha)
+		@cod_user = id
 		@senha = senha
 		@cpf = cpf
 		@nome = nome
@@ -27,5 +24,3 @@ class Usuario
 		return
 	end
 end
-
-asd = Usuario.new("asd","asd","add")
