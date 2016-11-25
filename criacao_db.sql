@@ -64,3 +64,21 @@ create table Alocado(
 	foreign key (id_rt) references Rota(id_rt),
 	foreign key (id_oni) references Onibus(id_oni)
 );
+
+-- Criar a tabela dos usuários
+create table user(
+	id_user int unsigned not null,
+	cpf char(11),
+	nome varchar(100),
+	senha varchar(30),
+	primary key (id_user)
+);
+
+-- Criar a tabela dos usuários
+create table adm(
+	id_adm int unsigned not null,
+	cpf char(11),
+	nome varchar(100),
+	senha varchar(30),
+	primary key (id_adm)
+);

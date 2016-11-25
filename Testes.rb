@@ -16,7 +16,7 @@ class TesteUsuario < Test::Unit::TestCase
 	end
 	#teste dos gets e sets para os atributos da classe Usuario
 	def teste_sets_e_gets_user
-		user = Usuario.new(1,"09309261960","Carlos Eduardo Cuzik","asd")
+		user = Usuario.new(1,"09309261960","Carlos Eduardo Cuzik")
 		user.cpf = "09209361970"
 		user.nome = "Carlos E. Cuzik"
 		assert_equal("09209361970",user.cpf)
@@ -31,7 +31,7 @@ class TesteAdministrador < Test::Unit::TestCase
 	end
 	#teste dos gets e sets para os atributos da classe Administrador
 	def teste_sets_e_gets_adm
-		adm = Administrador.new(1,"09309261960","Carlos Eduardo Cuzik","asd")
+		adm = Administrador.new(1,"09309261960","Carlos Eduardo Cuzik")
 		adm.cpf = "09209361970"
 		adm.nome = "Carlos E. Cuzik"
 		assert_equal("09209361970",adm.cpf)

@@ -5,42 +5,50 @@
 require_relative "Onibus"
 require_relative "Rota"
 require_relative "Ponto"
+require_relative "Conexao"
 
 class Administrador
-	@senha = ""
-	attr_accessor :cpf, :nome
+	attr_accessor :cpf, :nome, :conexao
 	attr_reader :cod_adm
-	def initialize(id,cpf,nome,senha)
+	def initialize(id,cpf,nome)
 		@cod_adm = id
-		@senha = senha
 		@cpf = cpf
 		@nome = nome
 	end
 
 	#inserção de novos elementos
-	def inserir_onibus(new_onibus) # fala fazer
-		# vai inserir um novo onibus que foi passado como parametro
+	def inserir_onibus(id_oni,placa,n_vagas,la,lo)
+		retorno = @conexao.inserir("Onibus","#{id_oni},'#{placa}',#{n_vagas},#{lo},#{la}")
+		if(!retorno) then
+			return false
+		end
 		return true
 	end
-	def inserir_rota(new_rota) # fala fazer
-		# vai inserir um novo rota que foi passado como parametro
+	def inserir_rota(new_rota)
+		retorno = @conexao.inserir("table","param1,'param2','param3'")
+		if(!retorno) then
+			return false
+		end
 		return true
 	end
-	def inserir_ponto(new_ponto) # fala fazer
-		# vai inserir um novo ponot que foi passado como parametro
+	def inserir_ponto(new_ponto)
+		retorno = @conexao.inserir("table","param1,'param2','param3'")
+		if(!retorno) then
+			return false
+		end
 		return true
 	end
         
 	#exclusão de elemento
-	def excluir_onibus(old_onibus) # fala fazer
+	def excluir_onibus(old_onibus)
 		# vai excluir um onibus que foi passado como parametro
 		return true
 	end
-	def excluir_rota(old_rota) # fala fazer
+	def excluir_rota(old_rota)
 		# vai excluir um rota que foi passado como parametro
 		return true
 	end
-	def excluir_ponto(old_ponto) # fala fazer
+	def excluir_ponto(old_ponto)
 		# vai excluir um ponot que foi passado como parametro
 		return true
 	end

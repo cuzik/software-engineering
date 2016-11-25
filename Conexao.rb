@@ -36,6 +36,9 @@ class Conexao
 		end
 		return retorno
 	end
+	def query(table,condicao="",col_ret="*")
+		return @mydb.query("SELECT #{col_ret} FROM #{table} #{condicao}")
+	end
 	def inserir(table,values)
 		@mydb.query("INSERT INTO #{table} VALUES(#{values});")
 	end

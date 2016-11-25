@@ -110,3 +110,11 @@ insert into Alocado(id_rt,id_oni,hora_saida,hora_chegada) values
 	(1,3,"17:30:00","18:00:00"),
 	(2,4,"15:45:00","16:20:00"),
 	(2,5,"18:45:00","19:20:00");
+
+-- Criar a tabela dos onibus alocas nas rotas
+insert into user(id_user,cpf,nome,senha) values
+	(1,"09309261960","Carlos Eduardo Cuzik","123");
+
+-- Criar a tabela dos onibus alocas nas rotas
+insert into adm(id_adm,cpf,nome,senha) values
+	(1,"09309261960","Carlos Eduardo Cuzik","123");
