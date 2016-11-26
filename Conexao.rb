@@ -19,6 +19,7 @@ class Conexao
 		@mydb.select_db(@database_mysql)
 	end
 	def lista_table(table,condicao="",col_ret="*")
+		#puts "SELECT #{col_ret} FROM #{table} #{condicao}"
 		@list = @mydb.query("SELECT #{col_ret} FROM #{table} #{condicao}")
 		labes = @list.fetch_fields
 		n_cols = @mydb.field_count
@@ -44,6 +45,10 @@ class Conexao
 	end
 	def deletar(table,condicao)
 		@mydb.query("DELETE FROM #{table} #{condicao}")
+	end
+	def atualizar(table,values,condicao)
+		#puts "UPDATE #{table} SET #{values} #{condicao}"
+		@mydb.query("UPDATE #{table} SET #{values} #{condicao}")
 	end
 	def fecha_db
 		@mydb.close

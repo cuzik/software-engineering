@@ -28,7 +28,59 @@ conexao.fecha_db
 
 #Roda o programa pra sempre
 while 1==1 do
-	
+	system "clear"
+	puts "O que deseja Fazer?"
+	puts "1- Inserir"
+	puts "2- Deletar"
+	puts "3- Atualizar"
+	escolha = Integer(gets.chomp)
+	case escolha
+	when 1
+		system "clear"
+		puts "O que deseja Inserir"
+		puts "1- Onibus"
+		puts "2- "
+		opcao = Integer(gets.chomp)
+		case opcao
+		when 1
+
+		when 2
+
+		else
+			puts "Operação invalida"
+		end
+				
+	when 2
+		system "clear"
+		puts "O que deseja Deletar"
+		puts "1- Onibus"
+		puts "2- "
+		opcao = Integer(gets.chomp)
+		case opcao
+		when 1
+
+		when 2
+
+		else
+			puts "Operação invalida"
+		end
+	when 3
+		system "clear"
+		puts "O que deseja Atualizar"
+		puts "1- Onibus"
+		puts "2- "
+		opcao = Integer(gets.chomp)
+		case opcao
+		when 1
+
+		when 2
+
+		else
+			puts "Operação invalida"
+		end
+	else
+		puts "Operação invalida"
+	end	
 end
 #Fecamento do Banco de dados
 

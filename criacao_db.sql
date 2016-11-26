@@ -39,7 +39,7 @@ create table Ponto_Rota(
 	id_pt int unsigned not null,
 	id_rt int unsigned not null,
 	pos int,
-	primary key (id_pt,id_rt),
+	primary key (id_pt,id_rt,pos),
 	foreign key (id_pt) references Ponto(id_pt),
 	foreign key (id_rt) references Rota(id_rt)
 );
@@ -51,6 +51,8 @@ create table Onibus(
 	n_vagas int,
 	LA int,
 	LO int,
+	velocidade_media real,
+	ponto_proximo int unsigned not null,
 	primary key (id_oni)
 );
 
@@ -60,7 +62,7 @@ create table Alocado(
 	id_oni int unsigned not null,
 	hora_saida time, -- HH:MM:SS
 	hora_chegada time, -- HH:MM:SS
-	primary key (id_rt,id_oni),
+	primary key (id_rt,id_oni,hora_saida),
 	foreign key (id_rt) references Rota(id_rt),
 	foreign key (id_oni) references Onibus(id_oni)
 );
@@ -81,4 +83,9 @@ create table adm(
 	nome varchar(100),
 	senha varchar(30),
 	primary key (id_adm)
+);
+
+-- Criar a tabela da Hora Atual
+create table hora(
+	atual time
 );

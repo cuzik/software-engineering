@@ -15,7 +15,6 @@ class Administrador
 		@cpf = cpf
 		@nome = nome
 	end
-
 	#inserção de novos elementos
 	def inserir_onibus(id_oni,placa,n_vagas,la,lo)
 		retorno = @conexao.inserir("Onibus","#{id_oni},'#{placa}',#{n_vagas},#{lo},#{la}")
@@ -24,32 +23,9 @@ class Administrador
 		end
 		return true
 	end
-	def inserir_rota(new_rota)
-		retorno = @conexao.inserir("table","param1,'param2','param3'")
-		if(!retorno) then
-			return false
-		end
-		return true
-	end
-	def inserir_ponto(new_ponto)
-		retorno = @conexao.inserir("table","param1,'param2','param3'")
-		if(!retorno) then
-			return false
-		end
-		return true
-	end
-        
 	#exclusão de elemento
 	def excluir_onibus(old_onibus)
 		# vai excluir um onibus que foi passado como parametro
-		return true
-	end
-	def excluir_rota(old_rota)
-		# vai excluir um rota que foi passado como parametro
-		return true
-	end
-	def excluir_ponto(old_ponto)
-		# vai excluir um ponot que foi passado como parametro
 		return true
 	end
 end
