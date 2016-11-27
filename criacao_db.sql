@@ -53,7 +53,8 @@ create table Onibus(
 	LO int,
 	velocidade_media real,
 	ponto_proximo int unsigned not null,
-	primary key (id_oni)
+	primary key (id_oni),
+	foreign key (ponto_proximo) references Ponto(id_pt)
 );
 
 -- Criar a tabela dos onibus alocas nas rotas
