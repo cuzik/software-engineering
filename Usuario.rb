@@ -46,7 +46,7 @@ class Usuario
 			@rota.insere_pontos
 			@rota.pega_distancia_ponto_a_ponto
 			distancia_restante = @rota.calcula_distancia(linha[1],@ponto_atual)
-			puts distancia_restante
+			#puts distancia_restante
 			if distancia_restante > 0 then
 				return linha
 			end

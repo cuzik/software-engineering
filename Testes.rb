@@ -23,6 +23,9 @@ class TesteUsuario < Test::Unit::TestCase
 		assert_equal("Carlos E. Cuzik",user.nome)
 		assert_equal(1,user.cod_user)
 	end
+	#onibus_melhor(oni)
+	#proximo_onibus(rota)
+	#tempo_restante(id_oni,distancia_restante)
 end
 #Classe para os teste Unitários da Classe Administrador
 class TesteAdministrador < Test::Unit::TestCase
@@ -38,6 +41,8 @@ class TesteAdministrador < Test::Unit::TestCase
 		assert_equal("Carlos E. Cuzik",adm.nome)
 		assert_equal(1,adm.cod_adm)
 	end
+	#inserir_onibus(id_oni,placa,n_vagas,la,lo)
+	#excluir_onibus(old_onibus)
 end
 #Classe para os teste Unitários da Classe Rota
 class TesteRota < Test::Unit::TestCase
@@ -51,6 +56,9 @@ class TesteRota < Test::Unit::TestCase
 		assert_equal("Rota1",rota.nome)
 		assert_equal(1,rota.cod_rota)
 	end
+	#insere_pontos
+	#pega_distancia_ponto_a_ponto
+	#calcula_distancia(id_oni,ponto_destino)
 end
 #Classe para os teste Unitários da Classe Ponto
 class TestePonto < Test::Unit::TestCase
@@ -112,4 +120,7 @@ class TesteOnibus < Test::Unit::TestCase
 		onibus_01.desce_passageiro()
 		assert_equal(true,onibus_01.vazio())
 	end
+	#atualiza_localizacao(pt)
+	#atualiza_velocidade(vel)
+	#atualiza_passageiros
 end

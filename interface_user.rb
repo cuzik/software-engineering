@@ -82,7 +82,7 @@ while 1==1 do
 				if hora_atual[0][0] < @linha[2] then
 					puts "o onibus ainda está no terminal"
 				else
-					tempo_restante = @user.tempo_restante(@linha[0],distancia_restante)
+					tempo_restante = @user.tempo_restante(@linha[1],distancia_restante)
 					if tempo_restante == 0 then
 						puts "Ele esta parado"
 					else
